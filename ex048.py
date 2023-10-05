@@ -4,9 +4,14 @@ lista_numero = []
 for numero in range (0,500,3):
     if numero % 2 != 0:
         lista_numero.append(numero)
+from time import sleep
+sleep(0.5)
 print('Lista dos números ímpares múltiplos de 3 (de 0 a 500):')
+sleep(0.5)
 print(lista_numero)
+sleep(0.5)
 print('Soma entre todos os números: ')
+sleep(0.5)
 print(math.fsum(lista_numero))
 
 
