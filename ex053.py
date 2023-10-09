@@ -1,10 +1,9 @@
 # 53: Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo, desconsiderando os espaços.
 from time import sleep
-lista = []
-frase = str(input('Digite uma frase qualquer: ')).replace(" ","")
-lista.append(frase)
+frase = str(input('Digite uma frase qualquer: ')).lower().replace(" ","")
 lista_invertida = frase[::-1]
+print('De trás pra frente fica assim: {}'.format(lista_invertida))
 if frase == lista_invertida:
-    print('Esta frase é um PALÍNDROMO!!!')
+    print('E por isso, esta frase é um PALÍNDROMO!!!')
 else:
-    print('Essa frase não é um Palíndromo.')
+    print('E por isot, essa frase NÃO É UM PALÍNDROMO.')
