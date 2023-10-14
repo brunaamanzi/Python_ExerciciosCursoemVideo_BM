@@ -8,7 +8,7 @@ while cont <= 10:
     print('{}'.format(primeiro_termo),end=' -> ')
     primeiro_termo += razao
     cont += 1
-print('FIM')
+print('PAUSA')
 opção = 1
 while opção != 0:
     opção = int(input('\033[1;32mDeseja ver mais quantos termos? Digite 0 para encerrar. \033[m'))
@@ -17,7 +17,6 @@ while opção != 0:
         print('{}'.format(primeiro_termo),end=' -> ')
         primeiro_termo += razao
         cont += 1
-    print('FIM')
-
+    print('PAUSA' if opção > 0 else 'FIM')
 
 
