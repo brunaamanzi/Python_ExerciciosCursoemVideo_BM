@@ -4,7 +4,7 @@ razao = int(input('Insira a razão da PA: '))
 termo = primeiro_termo
 cont = 1
 while cont <= 10:
-    print('{}'.format(primeiro_termo),end=' -> ')
-    primeiro_termo += razao
+    print('{}'.format(termo),end=' -> ')
+    termo += razao
     cont += 1
 print('FIM')
