@@ -6,4 +6,4 @@ while True:
         break
     soma += num
     cont += 1
-print('Você escreveu {} números e a soma entre eles é {}.'.format(cont,soma))
+print(f'Você escreveu {cont} números e a soma entre eles é {soma}.')
