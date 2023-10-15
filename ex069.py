@@ -8,12 +8,14 @@ mulheres_menos_20 = 0
 continua = 0
 while True:
     idade = int(input('Qual é a sua \033[1;33midade\033[m? '))
-    sexo = input('Informe seu \033[1;33msexo\033[m: [F/M] ').lower().strip()
+    sexo = input('Informe seu \033[1;33msexo\033[m: [F/M] ').lower().strip()[0]
+    while sexo not in 'mf':
+        sexo = input('Informe seu \033[1;33msexo\033[m: [F/M] ').lower().strip()[0]
     """if sexo != 'f' and sexo != 'm':
         sexo = input('Informe seu \033[1;33msexo\033[m: [F/M] ').lower().strip()"""
-    continua = input('\033[1;33mDeseja continuar\033[m? [S/N] ').lower().strip()
-    if continua not in 'sn':
-        continua = input('\033[1;33mDeseja continuar\033[m? [S/N] ').lower().strip()
+    continua = input('\033[1;33mDeseja continuar\033[m? [S/N] ').lower().strip()[0]
+    while continua not in 'sn':
+        continua = input('\033[1;33mDeseja continuar\033[m? [S/N] ').lower().strip()[0]
     if idade > 18:
         maior_18 += 1
     if sexo == 'm':
