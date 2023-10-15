@@ -10,7 +10,9 @@ derrota = 0
 while True:
     jogador = int(input('Digite um valor: '))
     resultado = computador + jogador
-    opção = str(input('PAR ou ÍMPAR? [P/I] ')).lower().strip()[0]
+    opção = ' '
+    while opção not in 'pi':
+        opção = str(input('PAR ou ÍMPAR? [P/I] ')).lower().strip()[0]
     print(f'Você jogou {jogador} e o computador {computador}. \033[1;36mResultado: {resultado}\033[m -> ',end=' ')
     if resultado % 2 == 0:
         print('PAR')
