@@ -11,5 +11,8 @@ aleatório_5 = randint(0,10)
 tupla = (aleatório_1,aleatório_2,aleatório_3,aleatório_4,aleatório_5)"""
 tupla = (randint(0,10),randint(0,10),randint(0,10),randint(0,10),randint(0,10)) # nessa opção não precisamos gravar variáveis
 print(f'Os valores sorteados foram: {tupla}')
-print(f'O menor valor gerado foi: {sorted(tupla)[0]}')
-print(f'O maior valor gerado foi: {sorted(tupla)[-1]}')
+sleep(0.5)
+"""print(f'O menor valor gerado foi: {sorted(tupla)[0]}')
+print(f'O maior valor gerado foi: {sorted(tupla)[-1]}')"""
+print(f'O menor valor gerado foi: {min(tupla)}')
+print(f'O maior valor gerado foi: {max(tupla)}')
