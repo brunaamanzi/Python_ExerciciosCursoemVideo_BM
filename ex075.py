@@ -7,12 +7,13 @@ print('Olá! Pense em 4 números...')
 print('-'*30)
 from time import sleep
 sleep(1)
-n1 = int(input('Insira um número: '))
+"""n1 = int(input('Insira um número: '))
 n2 = int(input('Insira outro número: '))
 n3 = int(input('Insira mais um número: '))
 n4 = int(input('Insira o último número: '))
 par1 = par2 = par3 = par4 = 0
-tupla = (n1,n2,n3,n4)
+tupla = (n1,n2,n3,n4)"""
+tupla = (int(input('Insira um número: ')),int(input('Insira outro número: ')),int(input('Insira mais um número: ')),int(input('Insira o último número: ')))
 print(f'Os valores digitados foram: {tupla}')
 if 9 in tupla:
     print(f'O valor 9 apareceu {tupla.count(9)} vezes.')
