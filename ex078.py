@@ -3,8 +3,12 @@ lista = []
 print('Olá! Por gentileza, escolha 5 números:')
 for c in range (0,5):
     lista.append(int(input(f'Insira um número na posição {c}: ')))
+print(f'Você digitou os valores {lista}')
+print(f'O maior valor digitado foi {max(lista)} e sua posição na lista é: ', end='')
 for i, c in enumerate(lista):
     if c == max(lista):
-        print(f'O maior valor digitado foi {c} e sua posição na lista é {i}.')
+        print(f'{i}, ',end='')
+print(f'\nO menor valor digitado foi {min(lista)} e sua posição na lista é: ', end='')
+for i, c in enumerate(lista):
     if c == min(lista):
-        print(f'O menor valor digitado foi {c} e sua posição na lista é {i}.')
+        print(f'{i}, ',end='')
