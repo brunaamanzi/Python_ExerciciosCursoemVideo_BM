@@ -8,6 +8,7 @@ for c in range (0,len(produtos)): # não podemos colocar for c in produtos, pois
         print(f'{produtos[c]:.<30}',end='')
     else: # para verificar posições ímpares (preços)
         print(f'R${produtos[c]:>8.2f}')
+print('='*40)
 """print(f'{produtos[0]:.<30}R${produtos[1]:>8}')
 print(f'{produtos[2]:.<30}R${produtos[3]:>8}')
 print(f'{produtos[4]:.<30}R${produtos[5]:>8}')
@@ -17,5 +18,4 @@ print(f'{produtos[10]:.<30}R${produtos[11]:>8}')
 print(f'{produtos[12]:.<30}R${produtos[13]:>8}')
 print(f'{produtos[14]:.<30}R${produtos[15]:>8}')
 print(f'{produtos[16]:.<30}R${produtos[17]:>8}')"""
-print('='*40)
 

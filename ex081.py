@@ -4,8 +4,7 @@ b) A lista de valores, ordenada de forma decrescente;
 c) Se o valor 5 foi digitado e está ou não na lista."""
 lista = []
 while True:
-    num = int(input('Insira um número: '))
-    lista.append(num)
+    lista.append(int(input('Insira um número: ')))
     while True:
         continua = input('Deseja continuar? [S/N] ').lower().strip()[0]
         if continua in 'sn':

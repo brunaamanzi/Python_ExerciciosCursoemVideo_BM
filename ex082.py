@@ -3,8 +3,7 @@ lista_total = []
 lista_pares = []
 lista_impares = []
 while True:
-    num = int(input('Insira um número: '))
-    lista_total.append(num)
+    lista_total.append(int(input('Insira um número: ')))
     while True:
         continua = input('Deseja continuar? [S/N] ').lower().strip()[0]
         if continua in 'sn':
