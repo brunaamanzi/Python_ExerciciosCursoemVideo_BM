@@ -7,7 +7,7 @@ dados = []
 continua = ''
 while True:
     lista.append(str(input('Insira o nome: ')))
-    lista.append(int(input('Insira o peso: ')))
+    lista.append(float(input('Insira o peso: ')))
     dados.append(lista[:])
     lista.clear()
     while True:
