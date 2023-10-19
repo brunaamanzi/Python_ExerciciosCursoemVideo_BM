@@ -30,13 +30,13 @@ print('-'*40)
 print(f'O \033[1;34mmaior peso\033[m cadastrado foi {maior}, de: ',end='')
 for p in dados:
     if maior in p:
-        print(p[0],end=', ')
+        print(f'[{p[0]}]',end=' ')
 print()
 print('-'*40)
 print(f'O \033[1;34mmenor peso\033[m cadastrado foi {menor}, de: ',end='')
 for p in dados:
     if menor in p:
-        print(p[0],end=', ')
+        print(f'[{p[0]}]',end=' ')
 print()
 print('-'*40)
 
