@@ -15,6 +15,7 @@ aleatório = 0
 for c in range (0,jogos):
     aleatório = randint(0,60),randint(0,60),randint(0,60),randint(0,60),randint(0,60),randint(0,60)
     palpite.append(aleatório)
+    palpite.sort()
     palpites.append(palpite[:])
     palpite.clear()
 print(f'Você jogará {jogos} vezes. Aqui está nossa sugestão:')
