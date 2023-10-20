@@ -5,7 +5,7 @@ c) uma lista com todas as mulheres;
 d) uma lista com todas as pessoas com idade acima da média."""
 lista_todos = []
 info = {}
-idade = 0
+idade = média_idade = 0
 while True:
     info['nome']=input('Insira o nome: ')
     while True:
@@ -23,17 +23,20 @@ while True:
     if continua == 'n':
         break
 print('-'*40)
-print(f'- O grupo tem {len(lista_todos)} pessoas.')
+print(f'- Ao todo temos {len(lista_todos)} pessoas cadastradas.')
 média_idade = idade / len(lista_todos)
 print(f'- A média de idade é de {média_idade:.0f} anos.')
 print(f'- As mulheres cadastradas foram: ',end='')
 for p in lista_todos: # iremos percorrer uma lista, não precisa de .items()
-    for k,v in p.items():
-        if k == 'sexo' and v == 'f':
-            print(f'[{p["nome"]}] ',end='')
+    if p["sexo"] == 'F': # nesse caso, não precisamos utilizar o k,v, pois podemos chamar com p['sexo']
+        print(f'[{p["nome"]}] ',end='')
+""" for k,v in p.items(): # essa forma também está correta
+        if k == 'sexo' and v == 'f':"""
 print()
 print('- Lista das pessoas que estão acima da média: ')
 for p in lista_todos:
     if p['idade'] > média_idade:
-        print(p)
+        for k,v in p.items():
+            print(f'{k} = {v}; ', end='')
+        print()
 print('<< ENCERRADO >>')
