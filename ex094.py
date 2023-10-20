@@ -8,7 +8,11 @@ info = {}
 idade = 0
 while True:
     info['nome']=input('Insira o nome: ')
-    info['sexo']=input('Insira o sexo: [F/M] ').lower().strip()[0]
+    while True:
+        info['sexo']=input('Insira o sexo: [F/M] ').upper().strip()[0]
+        if info['sexo'] in 'FM':
+            break
+        print('ERRO! Por favor, escolha F/M: ')
     info['idade']=int(input('Insira a idade: '))
     idade += info['idade']
     lista_todos.append(info.copy())

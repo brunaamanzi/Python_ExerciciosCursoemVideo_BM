@@ -8,7 +8,7 @@ for c in range (0,partidas):
     gol = int(input(f'Quantos gols na partida {c}? '))
     gols.append(gol)
     soma_gols += gol
-desempenho['gols']=gols
+desempenho['gols']=gols[:] # ou: desempenho['gols']=sum(gols)
 desempenho['total']=soma_gols
 print('-'*40)
 print(desempenho)
