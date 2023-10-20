@@ -3,6 +3,11 @@
 dados = dict()
 dados['nome']=input('Nome: ')
 dados['média']=float(input(f'Média de {dados["nome"]}: '))
-print(f'Nome é igual a {dados["nome"]}')
-print(f'Média é igual a {dados["média"]}')
-print('Situação é igual a Aprovado' if dados["média"] >= 7 else 'Situação é igual a Reprovado')
+if dados["média"] >= 7:
+    dados['situação']='Aprovado'
+elif 7 > dados["média"] > 5:
+    dados['situação']='Recuperação'
+else:
+    dados['situação']='Reprovado'
+for k,v in dados.items():
+    print(f' - {k} é igual a {v}.')
