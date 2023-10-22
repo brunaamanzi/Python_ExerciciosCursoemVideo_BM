@@ -5,18 +5,22 @@ def lin():
 def maior(*int):
     print('Analisando os valores passados...')
     sleep(0.5)
-    for valor in int:
-        print(valor,end=' ')
-    print()
-    sleep(0.5)
-    print(f'Foram informados {len(int)} valores ao todo...')
-    sleep(0.5)
-    m = sorted(int)[-1]
-    print(f'O maior número inserido foi {m}')
-    sleep(0.5)
+    if len(int) == 0:
+        print('Não foi inserido nenhum valor.')
+    else:
+        for valor in int:
+            print(valor,end=' ')
+        print()
+        sleep(0.5)
+        print(f'Foram informados {len(int)} valores ao todo...')
+        sleep(0.5)
+        m = sorted(int)[-1]
+        print(f'O maior número inserido foi {m}')
+        sleep(0.5)
     lin()
 
-maior(3,6,5,1,3,9,6,4,18,0)
-maior(7,5,3)
-maior(0)
-maior(6,3,8,6)
+maior(2,9,4,5,7,1)
+maior(4,7,0)
+maior(1,2)
+maior(6)
+maior()
