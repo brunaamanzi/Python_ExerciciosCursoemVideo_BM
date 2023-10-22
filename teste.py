@@ -1,3 +1,3 @@
-for c in range(10,0,-2):
+for c in range(90,40,2*(-1)):
     print(c)
 
