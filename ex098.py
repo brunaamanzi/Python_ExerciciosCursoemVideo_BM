@@ -6,36 +6,33 @@ c) Uma contagem personalizada"""
 from time import sleep
 def lin():
     print('-='*20)
-lin()
 def contador(i,f,p):
+    if p < 0:
+        p *= -1
+    if p == 0:
+        p = 1
     print(f'De {i} a {f}, de {p} em {p}:')
-    for c in range(i,f+1,p):
-        print(c,end=' ')
-        sleep(0.5)
-    print('FIM!')
-contador(1,10,1)
-lin()
-def contador(f,i,p):
-    print(f'De {f} a {i}, de {p} em {p}:')
-    for c in range(f,i-1,p):
-        print(c,end=' ')
-        sleep(0.5)
-    print('FIM!')
-contador(10,0,-2)
-lin()
-def contador(i,f,p):
-    print(f'De {i} a {f}, de {p} em {p}:')
-    for c in range(i, f+1, p):
-        print(c, end=' ')
-        sleep(0.5)
-    print('FIM!')
-print('Agora é a sua vez de personalizar a contagem!')
-i = int(input('Início: '))
-f = int(input('Fim:    '))
-p = int(input('Passo:  '))
-if f < i:
-    contador(i,f,p*(-1))
-else:
-    contador(i,f,p)
+    if i < f:
+        cont = i
+        while cont <= f:
+            print(f'{cont} ',end='')
+            sleep(0.5)
+            cont += p
+        print('FIM!')
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ',end='')
+            sleep(0.5)
+            cont -= p
+        print('FIM!')
+    lin()
 
+contador(1,10,1)
+contador(10,0,-2)
+print('Agora é a sua vez de personalizar a contagem!')
+inic = int(input('Início: '))
+fim = int(input('Fim:    '))
+pas = int(input('Passo:  '))
+contador(inic,fim,pas)
 
