@@ -17,15 +17,15 @@ contador(1,10,1)
 lin()
 def contador(f,i,p):
     print(f'De {f} a {i}, de {p} em {p}:')
-    for c in range(f,i,p):
+    for c in range(f,i-1,p):
         print(c,end=' ')
         sleep(0.5)
     print('FIM!')
-contador(10,-1,-2)
+contador(10,0,-2)
 lin()
 def contador(i,f,p):
     print(f'De {i} a {f}, de {p} em {p}:')
-    for c in range(i, f + 1, p):
+    for c in range(i, f+1, p):
         print(c, end=' ')
         sleep(0.5)
     print('FIM!')
@@ -33,6 +33,9 @@ print('Agora é a sua vez de personalizar a contagem!')
 i = int(input('Início: '))
 f = int(input('Fim:    '))
 p = int(input('Passo:  '))
-contador(i,f,p)
+if f < i:
+    contador(i,f,p*(-1))
+else:
+    contador(i,f,p)
 
 
