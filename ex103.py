@@ -2,7 +2,7 @@
 def ficha(jogador,gol):
     if jogador == '':
         jogador='<desconhecido>'
-    if gol == '':
+    if gol == '' or gol != int:
         gol=0
     print(f'O jogador {jogador} fez {gol} gol(s) no campeonato.')
 
