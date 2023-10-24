@@ -2,7 +2,7 @@
 # Exemplo:
 # n = leiaInt('Digite um número: ')
 
-def leiaInt(txt=0):
+def leiaInt(txt):
    while True:
         a = ''
         try:
@@ -12,6 +12,7 @@ def leiaInt(txt=0):
             print('\033[1;31mERRO! Digite um número inteiro válido.\033[m')
         if a.isnumeric():
             break
+
 n = leiaInt('Digite um número: ')
 print(f'Você acabou de digitar o número {n}!')
 

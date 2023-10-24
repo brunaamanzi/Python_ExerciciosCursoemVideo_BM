@@ -4,18 +4,25 @@
 - A menor nota;
 - A média da turma;
 - A situação (opcional)."""
-dados = {}
-def notas(a,b,c,d,e,sit=False):
-    """inserir descrição da função"""
-    dados['total']=a
-    dados['maior']=b
-    dados['menor']=c
-    dados['média']=d
-    dados['situação']=e
-    if dados['média'] >= 7:
-        print('Situação: BOA')
-        return True
-    print(dados)
+def notas(*n,sit=False):
+    """Função para analisar notas e situações de vários alunos.
+    :param n: uma ou mais notas dos alunos (aceita várias)
+    :param sit: valor opcional, indicando se deve ou não adicionar a situação
+    :return: dicionário com várias informações sobre a situação da turma.
+    """
+    dados = {}
+    dados['qtde']=len(n)
+    dados['maior']=max(n)
+    dados['menor']=min(n)
+    dados['média']=sum(n)/len(n)
+    if sit:
+        if dados['média'] >= 7:
+            dados['situação']='APROVADO'
+        elif dados['média'] >= 5:
+            dados['situação']='EM RECUPERAÇÃO'
+        else:
+            dados['situação']='REPROVADO'
+    return dados
 
-resp = notas(5.5,9.5,10,6,5,sit=True)
+resp = notas(5.5,2)
 print(resp)
