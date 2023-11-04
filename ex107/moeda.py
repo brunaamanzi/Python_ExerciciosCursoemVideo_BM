@@ -1,15 +1,15 @@
 def aumentar(n,p):
-    perc = p / 100
-    a = n * (1+perc)
-    return a
+    res = n+(n*p/100)
+    return res
 
 def diminuir(n,p):
-    perc = p / 100
-    a = n * (1-perc)
-    return a
+    res = n-(n*p/100)
+    return res
 
 def dobro(n):
-    return n * 2
+    res = n * 2
+    return res
 
 def metade(n):
-    return n / 2
+    res = n / 2
+    return res
