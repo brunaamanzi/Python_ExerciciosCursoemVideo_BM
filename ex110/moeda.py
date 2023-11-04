@@ -51,5 +51,17 @@ def moeda (p = 0,m = 'R$'):
     """
     return f"{m}{p:.2f}".replace(".",",") # para formatar com vírgula, e não com ponto
 
-def resumo(função):
+def ajuda(função):
     help(função)
+
+def resumo(p = 0,a = 0,r = 0):
+    print('-'*40)
+    print(f'{"RESUMO DO VALOR":^40}')
+    print('-'*40)
+    print(f'{"Preço analisado:":<30} {moeda(p)}')
+    print(f'{"Dobro do preço:":<30} {moeda(p*2)}')
+    print(f'{"Metade do preço:":<30} {moeda(p/2)}')
+    print(f'{a:2}{"% de aumento:":<28} {moeda(p+(p*a/100))}')
+    print(f'{r:2}{"% de redução:":<28} {moeda(p-(p*r/100))}')
+    print('-'*40)
+

@@ -2,5 +2,6 @@
 
 from ex110 import moeda
 
-moeda.resumo(moeda.moeda)
-moeda.resumo(moeda.metade)
+# moeda.ajuda(moeda)
+valor = float(input('Digite o preço: R$'))
+moeda.resumo(valor,2,3)
