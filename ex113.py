@@ -8,8 +8,12 @@ def leiaInt(txt):
             return a
         except ValueError:
             print('\033[1;31mERRO! Digite um número inteiro válido.\033[m')
+        except KeyboardInterrupt:
+            print('\033[1;31m\nO usuário preferiu não digitar esse número.\033[m')
+            return 0
         if a.isnumeric():
             break
+def leiaFloat(txt):
     while True:
         b = ''
         try:
@@ -17,9 +21,12 @@ def leiaInt(txt):
             return b
         except ValueError:
             print(f'\033[1;31mERRO! Digite um número real válido.\033[m')
+        except KeyboardInterrupt:
+            print('\033[1;31m\nO usuário preferiu não digitar esse número.\033[m')
+            return 0
         if b.isnumeric():
             break
 
 i = leiaInt('Digite um número inteiro: ')
-r = leiaInt('Digite um número Real: ')
+r = leiaFloat('Digite um número Real: ')
 print(f'O valor inteiro digitado foi {i} e o real foi {r}')
