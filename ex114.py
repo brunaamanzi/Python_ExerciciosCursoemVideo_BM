@@ -8,3 +8,4 @@ except urllib.error.URLError: # poderia ser apenas except:
     print('Deu erro!')
 else:
     print('Tudo ok')
+    print(site.read()) # para ler o código HTML do site desejado
