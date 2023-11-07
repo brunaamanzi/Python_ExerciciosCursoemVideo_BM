@@ -10,12 +10,19 @@ if not arquivoExiste(arq):
 while True:
     resposta = menu(['Ver Pessoas Cadastradas','Cadastrar Nova Pessoa','Sair do Programa'])
     if resposta == 1:
-        cabeçalho('Opção 1')
+        # Opção de listar conteúdo de um arquivo:
+        lerArquivo(arq)
     elif resposta == 2:
-        cabeçalho('Opção 2')
+        #Opção de cadastrar uma nova pessoa
+        cabeçalho('NOVO CADASTRO')
+        nome = input('Nome: ')
+        idade = leiaInt('Idade: ')
+        cadastrar(arq,nome,idade)
     elif resposta == 3:
+        # Opção de sair do programa
         cabeçalho('Saindo do Programa... Até logo!')
         break
     else:
+        #digitou opção errada no MENU
         print('\033[1;31mERRO! Digite uma opção válida.\033[m')
     sleep(1)
